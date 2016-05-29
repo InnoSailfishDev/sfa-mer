@@ -87,10 +87,10 @@ if repo_is_set "$DHD_REPO"; then
 fi
 sed -i "/begin 60_ssu/a ssu dr adaptation0" $KSFL
 
-mchapter "8.3"
-minfo "Info: Creating patterns"
-[ -d hybris ] || mkdir -p hybris
-./hybris/droid-configs/droid-configs-device/helpers/process_patterns.sh || die
+#mchapter "8.3"
+#minfo "Info: Creating patterns"
+#[ -d hybris ] || mkdir -p hybris
+#./hybris/droid-configs/droid-configs-device/helpers/process_patterns.sh || die
 
 cat $KSFL > ~/a.ks
 mchapter "8.4"

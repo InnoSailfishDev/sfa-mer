@@ -18,6 +18,12 @@ minfo "Untaring Mer"
 touch ${TARBALL}.untarred
 minfo "Done with Mer"
 
+echo 'alias sdk=$MER_ROOT/sdks/sdk/mer-sdk-chroot' >> ~/.bashrc
+exec bash
+echo 'PS1="MerSDK $PS1"' >> ~/.mersdk.profile
+cd $HOME
+sdk
+
 # These commands are a tmp workaround of glitch when working with target:
 zypper ar http://repo.merproject.org/obs/home:/sledge:/mer/latest_i486/ \
 curlfix
